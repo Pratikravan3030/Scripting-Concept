@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Bank Account</h3>
+
+Name: <input id="accname"><br><br>
+Account No: <input id="accno"><br><br>
+Balance: <input id="balance" type="number"><br><br>
+
+<button onclick="create()">Create Account</button>
+<br><br>
+
+Amount: <input id="amt" type="number"><br><br>
+<button onclick="deposit()">Deposit</button>
+<button onclick="withdraw()">Withdraw</button>
+
+<script>
+  class BankAccount {
+    constructor(name, accno, balance) {
+      this.name = name;
+      this.accno = accno;
+      this.balance = balance;
+    }
+
+    deposit(amount) {
+      this.balance += amount;
+      alert("Updated Balance: ₹" + this.balance);
+    }
+
+    withdraw(amount) {
+      this.balance -= amount;
+      alert("Updated Balance: ₹" + this.balance);
+    }
+
+    display() {
+      alert(
+        "Account Holder: " + this.name +
+        "\nAccount No: " + this.accno +
+        "\nBalance: ₹" + this.balance
+      );
+    }
+  }
+
+  let acc;
+
+  function create() {
+    acc = new BankAccount(
+      document.getElementById("accname").value,
+      document.getElementById("accno").value,
+      parseInt(document.getElementById("balance").value)
+    );
+    acc.display();
+  }
+
+  function deposit() {
+    acc.deposit(parseInt(document.getElementById("amt").value));
+  }
+
+  function withdraw() {
+    acc.withdraw(parseInt(document.getElementById("amt").value));
+  }
+</script>
+
+</body>
+</html>

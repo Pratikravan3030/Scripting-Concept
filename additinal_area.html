@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Length: <input id="l"><br><br>
+Breadth: <input id="b"><br><br>
+<button onclick="calc()">Calculate</button>
+
+<script>
+  class Rectangle {
+    constructor(l, b) {
+      this.l = l;
+      this.b = b;
+    }
+    area() {
+      return this.l * this.b;
+    }
+  }
+
+  function calc() {
+    const r = new Rectangle(
+      parseInt(l.value),
+      parseInt(b.value)
+    );
+    alert("Area of Rectangle = " + r.area());
+  }
+</script>
+
+</body>
+</html>
