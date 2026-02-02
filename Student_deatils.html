@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Student Details</h3>
+
+Name: <input id="name"><br><br>
+Roll No: <input id="roll"><br><br>
+Class: <input id="class"><br><br>
+Marks: <input id="marks" type="number"><br><br>
+
+<button onclick="showDetails()">Submit</button>
+
+<p id="output"></p>
+
+<script>
+  class Student {
+    constructor(name, roll, cls, marks) {
+      this.name = name;
+      this.roll = roll;
+      this.cls = cls;
+      this.marks = marks;
+    }
+
+    display() {
+      document.getElementById("output").innerHTML =
+        "Name: " + this.name + "<br>" +
+        "Roll No: " + this.roll + "<br>" +
+        "Class: " + this.cls + "<br>" +
+        "Marks: " + this.marks;
+    }
+  }
+
+  function showDetails() {
+    const s = new Student(
+      document.getElementById("name").value,
+      document.getElementById("roll").value,
+      document.getElementById("class").value,
+      document.getElementById("marks").value
+    );
+    s.display();
+  }
+</script>
+
+</body>
+</html>

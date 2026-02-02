@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Area of Rectangle</h3>
+
+Length: <input id="length" type="number"><br><br>
+Breadth: <input id="breadth" type="number"><br><br>
+
+<button onclick="calculate()">Calculate Area</button>
+
+<p id="result"></p>
+
+<script>
+  class Rectangle {
+    constructor(l, b) {
+      this.length = l;
+      this.breadth = b;
+    }
+
+    area() {
+      return this.length * this.breadth;
+    }
+  }
+
+  function calculate() {
+    const l = parseInt(document.getElementById("length").value);
+    const b = parseInt(document.getElementById("breadth").value);
+
+    const rect = new Rectangle(l, b);
+    document.getElementById("result").innerText =
+      "Area of Rectangle = " + rect.area();
+  }
+</script>
+
+</body>
+</html>
