@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Handling</title>
+
+  <script>
+
+    function pageLoaded() {
+      alert("Page loaded successfully");
+    }
+
+
+    function buttonClick() {
+      alert("Button clicked");
+    }
+
+
+    function mouseOver() {
+      document.getElementById("box").style.backgroundColor = "lightblue";
+    }
+
+
+    function mouseOut() {
+      document.getElementById("box").style.backgroundColor = "lightgreen";
+    }
+
+
+    function keyDown() {
+      alert("Key pressed");
+    }
+
+
+    function valueChange() {
+      alert("Dropdown value changed");
+    }
+
+
+    function submitForm() {
+      alert("Form submitted");
+      return false; 
+    }
+  </script>
+
+</head>
+
+<body onload="pageLoaded()">
+
+<h3>Internal JavaScript Event Handling</h3>
+
+<button onclick="buttonClick()">Click Me</button>
+<br><br>
+
+<div id="box"
+     onmouseover="mouseOver()"
+     onmouseout="mouseOut()"
+     style="width:200px;height:100px;background-color:lightgray;">
+  Hover over me
+</div>
+
+<br><br>
+
+<input type="text" onkeydown="keyDown()" placeholder="Press any key">
+<br><br>
+
+<select onchange="valueChange()">
+  <option>Select</option>
+  <option>Java</option>
+  <option>JavaScript</option>
+</select>
+
+<br><br>
+
+<form onsubmit="return submitForm()">
+  <input type="submit" value="Submit Form">
+</form>
+
+</body>
+</html>

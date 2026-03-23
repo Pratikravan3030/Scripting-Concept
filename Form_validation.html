@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+</head>
+<body>
+
+<h3>Registration Form</h3>
+
+<form onsubmit="return validateForm()">
+  Name: <input type="text" id="name"><br><br>
+  Email: <input type="text" id="email"><br><br>
+  Password: <input type="password" id="password"><br><br>
+  Age: <input type="number" id="age"><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let age = document.getElementById("age").value;
+
+    if (name === "") {
+      alert("Name is required");
+      return false;
+    }
+
+    if (email === "") {
+      alert("Email is required");
+      return false;
+    }
+
+    if (password.length < 6) {
+      alert("Password must be at least 6 characters");
+      return false;
+    }
+
+    if (age <= 0) {
+      alert("Enter a valid age");
+      return false;
+    }
+
+    alert("Form submitted successfully");
+    return true;
+  }
+</script>
+
+</body>
+</html>
