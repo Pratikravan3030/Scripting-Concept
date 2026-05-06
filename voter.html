@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Voter Eligibility</title>
+</head>
+<body>
+
+<script>
+    let age = prompt("Enter your age:");
+    age = Number(age);
+
+    if (isNaN(age) || age <= 0) {
+        console.log("Invalid age entered.");
+        alert("Invalid age entered.");
+    } 
+    else if (age >= 18) {
+        console.log("Status: Eligible to vote");
+        alert("You are eligible to vote!");
+    } 
+    else {
+        let yearsLeft = 18 - age;
+        console.log("Status: Not eligible");
+        alert("You are not eligible. Wait " + yearsLeft + " more year(s).");
+    }
+</script>
+
+</body>
+</html>

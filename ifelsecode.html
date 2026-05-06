@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electricity Bill</title>
+</head>
+<body>
+
+<script>
+    let units = prompt("Enter the number of units:");
+    units = Number(units);
+
+    let totalBill = 0;
+
+    if (isNaN(units) || units <= 0) {
+        console.log("No bill generated.");
+        alert("No bill generated.");
+    } 
+    else if (units <= 50) {
+        totalBill = units * 2;
+    } 
+    else if (units <= 100) {
+        totalBill = units * 3;
+    } 
+    else {
+        totalBill = units * 5;
+    }
+
+    if (totalBill > 0) {
+        console.log("Total Units: " + units);
+        console.log("Total Bill: ₹" + totalBill);
+        alert("Your total bill is: ₹" + totalBill);
+    }
+</script>
+
+</body>
+</html>

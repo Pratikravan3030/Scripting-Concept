@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Exception Handling</h3>
+
+<button onclick="demo()">Click</button>
+
+<script>
+  function demo() {
+    try {
+      let a =parseInt(prompt("enter first number"))
+      let b =parseInt(prompt("enter second number"))
+      let result = a / b;
+
+      if (b === 0) {
+        throw "Division by zero error";
+      }
+
+      document.write(result);
+    } catch (error) {
+      document.write("Error: " + error);
+    } finally {
+      document.write("<br>Program ended");
+    }
+  }
+</script>
+
+</body>
+</html>

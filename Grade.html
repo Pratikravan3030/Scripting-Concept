@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade Calculator</title>
+</head>
+<body>
+
+<script>
+    let marks = prompt("Enter your percentage (0-100):");
+    marks = Number(marks);
+
+    if (isNaN(marks) || marks < 0 || marks > 100) {
+        console.log("Invalid Input. Please enter a number between 0 and 100.");
+    } 
+    else if (marks >= 75) {
+        console.log("Result: First Class with Distinction");
+    } 
+    else if (marks >= 60) {
+        console.log("Result: First Class");
+    } 
+    else if (marks >= 50) {
+        console.log("Result: Second Class");
+    } 
+    else if (marks >= 35) {
+        console.log("Result: Pass Class");
+    } 
+    else {
+        console.log("Result: Fail");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Event Handling Demo</title>
+</head>
+<body>
+
+  <h2 id="title">Event Playground</h2>
+
+  <button id="btn">Click Me</button>
+  <br><br>
+
+  <input type="text" id="inputBox" placeholder="Type something">
+  <br><br>
+
+  <select id="dropdown">
+    <option value="">Select</option>
+    <option value="Java">Java</option>
+    <option value="JavaScript">JavaScript</option>
+  </select>
+
+  <script>
+
+    document.getElementById("btn").addEventListener("click", function () {
+      alert("Button clicked");
+    });
+
+
+    document.getElementById("title").addEventListener("mouseover", function () {
+      this.style.color = "red";
+    });
+
+    document.getElementById("title").addEventListener("mouseout", function () {
+      this.style.color = "green";
+    });
+
+
+    document.getElementById("inputBox").addEventListener("keydown", function (event) {
+      console.log("Key pressed:", event.key);
+    });
+
+
+    document.getElementById("inputBox").addEventListener("input", function () {
+      console.log("Current value:", this.value);
+    });
+
+
+    document.getElementById("dropdown").addEventListener("change", function () {
+      alert("You selected " + this.value);
+    });
+
+
+    window.addEventListener("load", function () {
+      console.log("Page fully loaded");
+    });
+  </script>
+
+</body>
+</html>

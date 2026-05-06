@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Events</title>
+</head>
+<body>
+
+<h3>Enter Your Name</h3>
+
+<input type="text"
+       onmouseenter="enterMsg()"
+       onmouseleave="leaveMsg()">
+
+<p id="msg"></p>
+
+<script>
+    function enterMsg() {
+        document.getElementById("msg").innerHTML = "Cursor entered the input field";
+    }
+
+    function leaveMsg() {
+        document.getElementById("msg").innerHTML = "Cursor left the input field";
+    }
+</script>
+
+</body>
+</html>
